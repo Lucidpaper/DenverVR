@@ -1,6 +1,43 @@
 <html>
-<Head></Head>
-<body>
-	<h1>hello Denver VR</h1>
-</body>
+	<Head>
+		
+		<title>Denver VR Hackathon</title>
+		<script src="//code.jquery.com/jquery.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"></script>
+		<!-- docs: http://angular-ui.github.io/bootstrap/ -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap.min.js"></script>
+		<script>
+			angular.module('VRHack', ['ui.bootstrap']).controller('DropdownCtrl', function ($scope, $log) {
+				// controller content
+			});
+		</script>
+	</Head>
+	<body ng-app="VRHack">
+		<div class="container">
+			<nav class="navbar navbar-default" role="navigation">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">DenverVR Hackathon</a>
+				</div>
+			
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Link</a></li>
+						<li><a href="#">Link</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</nav>
+			<div class="jumbotron">
+				<H1>Denver VR Hackathon</H1>
+			</div>
+		</div>
+	</body>
 </html>
