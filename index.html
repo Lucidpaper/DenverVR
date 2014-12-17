@@ -7,37 +7,46 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"></script>
 		<!-- docs: http://angular-ui.github.io/bootstrap/ -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap.min.js"></script>
-		<script>
-			angular.module('VRHack', ['ui.bootstrap']).controller('DropdownCtrl', function ($scope, $log) {
-				// controller content
-			});
-		</script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="trianglify.js"></script>
+		
 	</Head>
-	<body ng-app="VRHack">
+	<body>
 		<div class="container">
-			<nav class="navbar navbar-default" role="navigation">
+			<nav class="navbar navbar-default" style="opacity: .8;" role="navigation">
 				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
+				<div class="navbar-header" >
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">DenverVR Hackathon</a>
+					<a class="navbar-brand" href="#">Denver VR Hackathon</a>
 				</div>
 			
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse navbar-ex1-collapse">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
+						<li class="active"><a href="#">HOME</a></li>
+						<li><a href="#">LOGISTICS [Coming Soon]</a></li>
+						<li><a href="#">SPONSORS [Coming Soon]</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</nav>
-			<div class="jumbotron">
+			<div class="jumbotron" style="opacity: .8;">
 				<H1>Denver VR Hackathon</H1>
+				<div class="well">
+					<h2>Learn more as it happens</h2>
+						<p>Join the Denver VR Hackathon Mailing list updates about this hackathon scheduled for spring 2015</p>
+						<button class="btn"><a href='http://oncater.us8.list-manage.com/subscribe?u=375e8da47cabff90f77cc1505&id=3711861f5a'>Join Now</a></button>
+				</div>
 			</div>
 		</div>
+		<script>
+			var t = new Trianglify();
+			var pattern = t.generate(document.body.clientWidth, document.body.clientHeight);
+			document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
+		</script>
 	</body>
 </html>
